@@ -11,11 +11,14 @@ Plugin 'VundleVim/Vundle.vim'
 " Tree view
 Plugin 'scrooloose/nerdtree'
 
-" Git commands from within vim
+" Git integration
 Plugin 'tpope/vim-fugitive'
 
 " Status bar plugin
 Plugin 'vim-airline/vim-airline'
+
+" Show git diff in the 'gutter'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -23,7 +26,7 @@ call vundle#end()
 filetype plugin indent on
 
 syntax on             " syntax highlighting on
-" set background=dark
+set background=dark
 set number            " show line numbers
 set autoread          " automatically read changes to files
 set showmatch         " show the matching part of the pair for [] {} and ()
@@ -90,7 +93,7 @@ nnoremap H gT
 nnoremap L gt
 
 " Open NERDTree when vim starts up
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " Use ctrl+n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
